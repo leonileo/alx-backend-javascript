@@ -6,10 +6,12 @@ export default class Pricing {
     this.currency = currency;
   }
 
+  // Getter
   get amount() {
-    return this._amount;
+    return (this._amount);
   }
 
+  // Setter
   set amount(value) {
     if (typeof value !== 'number') {
       throw new TypeError('amount must be a number');
@@ -17,21 +19,17 @@ export default class Pricing {
     this._amount = value;
   }
 
-  /**
-   * @returns {Currency}
-   */
-  get currency() {
-    return this._currency;
-  }
-
-  /**
-   * @param {Currency} value
-   */
+  // Setter
   set currency(value) {
     if (!(value instanceof Currency)) {
       throw new TypeError('currency must be a Currency');
     }
     this._currency = value;
+  }
+
+  // Getter
+  get currency() {
+    return (this._currency);
   }
 
   displayFullPrice() {
